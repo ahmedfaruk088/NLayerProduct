@@ -10,7 +10,7 @@ Bu proje, C# programlama dili ve MSSQL veritabanı kullanılarak, kurumsal yazı
 
 **Gelişmiş Arama:** Ürün veya kategorileri ID bazlı filtreleme ve listeleme.
 
-##**🏗️ Teknik Mimari ve Katmanlı Yapı**
+## **🏗️ Teknik Mimari ve Katmanlı Yapı**
 Proje, Solid prensipleri temel alınarak, her katmanın kendi sorumluluğuna sahip olduğu Servis Tabanlı Katmanlı Mimari ile kurgulanmıştır:
 
 **Data Access Layer:** Veritabanı ile doğrudan iletişim kuran katmandır. EFProductDal ve EFCategoryDal sınıfları aracılığıyla Entity Framework kullanılarak veritabanı CRUD işlemleri (Ekleme, Silme, Güncelleme, Listeleme) bu katmanda gerçekleştirilir.
