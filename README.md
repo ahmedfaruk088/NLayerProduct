@@ -1,37 +1,10 @@
-C# ile Katmanlı Mimari (N-Tier Architecture) kullanılarak geliştirilmiş bir Ürün Yönetim Sistemi projesidir.
-
-🚀 Proje Hakkında
-Bu proje, yazılım geliştirme süreçlerinde sürdürülebilirliği artırmak amacıyla iş mantığı, veri erişimi ve arayüz katmanlarının birbirinden ayrıldığı bir yapı üzerine kurulmuştur.
-
-🛠️ Kullanılan Teknolojiler
-Programlama Dili: C#
-
-Framework: .NET Framework / .NET
-
-ORM: Entity Framework
-
-Mimari: N-Tier (Layered) Architecture
-
-Veritabanı: SQL Server
-
-🏗️ Mimari Yapı (Katmanlar)
-Proje şu temel katmanlardan oluşmaktadır:
-
-Presentation Layer (UI): Kullanıcının etkileşime girdiği Windows Forms arayüzü.
-
-Business Logic Layer (BLL): İş kurallarının ve validasyonların (doğrulamaların) yapıldığı katman.
-
-Data Access Layer (DAL): Veritabanı CRUD (Ekleme, Listeleme, Güncelleme, Silme) işlemlerinin yönetildiği katman.
-
-Entity Layer: Veritabanı tablolarına karşılık gelen nesne modelleri.
-
-📋 Özellikler
-Ürün Listeleme
-
-Yeni Ürün Ekleme
-
-Ürün Bilgilerini Güncelleme
-
-Ürün Silme
-
-Kategori Yönetimi
+Aşağıdaki metni olduğu gibi kopyalayıp GitHub'daki README.md dosyana yapıştırabilirsin. Görsel ve tablo desteğiyle çok daha profesyonel duracaktır:📦 NLayerProduct - Ürün Yönetim SistemiBu proje, C# programlama dili kullanılarak Katmanlı Mimari (N-Tier Architecture) yapısında geliştirilmiş bir masaüstü uygulamasıdır. Projede veritabanı yönetimini kolaylaştırmak amacıyla Entity Framework teknolojisinden yararlanılmıştır.🏗️ Mimari Yapı ve KatmanlarYazılımın sürdürülebilirliğini ve test edilebilirliğini artırmak için proje 4 ana katmana ayrılmıştır:KatmanTanımGöreviPresentation (UI)Kullanıcı ArayüzüWindows Forms ekranları ve kullanıcı etkileşimi.Business (BLL)İş MantığıVeri doğrulamaları ve iş kurallarının kontrolü.DataAccess (DAL)Veri ErişimiVeritabanı bağlantısı ve CRUD işlemleri.EntityNesne ModelleriVeritabanı tablolarının sınıflara (Class) dönüştürülmüş hali.🖼️ Uygulama Görselleri(Ekran görüntülerini projenin içine yükledikten sonra bu linkleri güncelleyebilirsin)🗄️ Veritabanı Şeması (SQL Server)Projenin çalışması için kullanılan temel SQL tablosu şu şekildedir:SQLCREATE TABLE TblProduct (
+    ProductID INT PRIMARY KEY IDENTITY(1,1),
+    ProductName NVARCHAR(50),
+    ProductStock INT,
+    ProductPrice DECIMAL(18,2),
+    CategoryID INT,
+    ProductDescription NVARCHAR(250),
+    Status BIT
+);
+🛠️ Teknik ÖzelliklerProgramlama Dili: C#ORM: Entity FrameworkMimari: N-Tier Architectureİşlevler: Ürün Listeleme, Ekleme, Silme, Güncelleme ve ID bazlı filtreleme.
