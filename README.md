@@ -22,4 +22,4 @@ Proje, Solid prensipleri temel alınarak, her katmanın kendi sorumluluğuna sah
 **Presentation Layer (UI):** Kullanıcının etkileşime geçtiği Windows Forms katmanıdır. FrmProduct_Load aşamasında kategoriler dinamik olarak ComboBox'a yüklenir ve ürünlerle ilişkili şekilde listelenir.
 
 ## **📸 Uygulama Ekran Görüntüleri**
-![Uygulama Ekranı](FrmCategory.png)![Uygulama Ekranı](FrmCategory (2).png)![Uygulama Ekranı](FrmProduct.png)![Uygulama Ekranı](FrmProduct (2).png)![Uygulama Ekranı](FrmProduct(3).png)
+![Uygulama Ekranı](FrmCategory.png)![Uygulama Ekranı](FrmCategory(2).png)![Uygulama Ekranı](FrmProduct.png)![Uygulama Ekranı](FrmProduct(2).png)![Uygulama Ekranı](FrmProduct(3).png)
