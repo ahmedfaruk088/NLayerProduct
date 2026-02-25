@@ -1,31 +1,18 @@
-📦 Product Management System - N-Tier Architecture
-Bu proje, C# programlama dili ve Entity Framework altyapısı kullanılarak, Katmanlı Mimari (N-Tier) prensiplerine uygun olarak geliştirilmiş bir Ürün ve Kategori yönetim sistemidir.
+# **📦 Product Management System - Katmanlı Mimari ile Stok Yönetimi**
+Bu proje, C# programlama dili ve MSSQL veritabanı kullanılarak, kurumsal yazılım geliştirme standartlarına uygun Katmanlı Mimari (N-Tier Architecture) yapısıyla geliştirilmiştir.
 
-🏗️ Mimari Yapı
-Proje, kodun sürdürülebilirliği ve test edilebilirliği için 4 ana katmana ayrılmıştır:
+## **🚀 Özellikler** 
+**Kategori Yönetimi:** Kategori ekleme, silme, güncelleme ve durum (Aktif/Pasif) takibi.
+**Ürün Modülü:** Ürün adı, stok miktarı, fiyat ve açıklama bilgilerinin yönetimi.
+**İlişkisel Veritabanı:** Ürünlerin kategorilerle eşleştirilerek kategorize edilmesi.
+**Gelişmiş Arama:** Ürün veya kategorileri ID bazlı filtreleme ve listeleme.
 
-Presentation Layer: WinForms arayüzü ve kullanıcı etkileşimi.
+##**🏗️ Teknik Mimari ve Katmanlı Yapı**
+Proje, Solid prensipleri temel alınarak, her katmanın kendi sorumluluğuna sahip olduğu Servis Tabanlı Katmanlı Mimari ile kurgulanmıştır:
+**Data Access Layer:** Veritabanı ile doğrudan iletişim kuran katmandır. EFProductDal ve EFCategoryDal sınıfları aracılığıyla Entity Framework kullanılarak veritabanı CRUD işlemleri (Ekleme, Silme, Güncelleme, Listeleme) bu katmanda gerçekleştirilir.
+**Business Logic Layer :** Projenin iş mantığının ve kontrol mekanizmalarının bulunduğu katmandır. ProductManager ve CategoryManager sınıfları, gelen verileri işleyerek gerekli doğrulamaları yapar ve Data Access katmanıyla güvenli köprü kurar.
+**Entity Layer:** Veritabanındaki tabloların (Ürün ve Kategori) C# tarafındaki karşılığı olan sınıfları (Product, Category) barındırır.
+**Presentation Layer (UI):** Kullanıcının etkileşime geçtiği Windows Forms katmanıdır. FrmProduct_Load aşamasında kategoriler dinamik olarak ComboBox'a yüklenir ve ürünlerle ilişkili şekilde listelenir.
 
-Business Layer: Manager sınıfları üzerinden iş mantığı ve doğrulama süreçleri.
-
-Data Access Layer: EntityFramework tabanlı veri erişim ve CRUD operasyonları.
-
-Entity Layer: Veritabanı tablolarını temsil eden POCO sınıfları.
-
-🚀 Özellikler
-Gelişmiş Listeleme: Ürünlerin kategorileriyle birlikte ilişkisel olarak listelenmesi.
-
-Interface-Based Design: Servis ve Veri Erişim katmanlarında arayüz (Interface) kullanımı.
-
-CRUD İşlemleri: Ürün ve Kategori bilgilerini ekleme, silme, güncelleme ve ID tabanlı sorgulama.
-
-Dinamik Veri Bağlama: ComboBox üzerinden otomatik kategori eşleşmesi.
-
-💾 Kurulum
-SQL Server üzerinde gerekli veritabanını oluşturun.
-
-DataAccessLayer içerisindeki Context dosyasında veya App.config içinde yer alan bağlantı adresini (Connection String) kendi SQL sunucunuza göre düzenleyin.
-
-Visual Studio üzerinden bağımlılıkları yükleyerek projeyi çalıştırın.
-
-📸 Uygulama Ekran Görüntüleri
+## **📸 Uygulama Ekran Görüntüleri**
+![Uygulama Ekranı](FrmCategory.png)![Uygulama Ekranı](FrmCategory(2).png)![Uygulama Ekranı](FrmProduct.png)![Uygulama Ekranı](FrmProduct(2).png)![Uygulama Ekranı](FrmProduct(3).png)
